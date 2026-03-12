@@ -6,7 +6,7 @@ amplitude = 1.5
 freq = 100
 sampling_freq = 10000
 
-dac = r2r.R2R_DAC([22,27,17,26,25,21,20,16], 3.3)
+dac = r2r.R2R_DAC([22,27,17,26,25,21,20,16], 3.005)
 
 try:
     while(True):

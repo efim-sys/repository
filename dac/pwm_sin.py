@@ -3,7 +3,7 @@ import math
 import time
 
 amplitude = 1.5
-freq = 10
+freq = 40
 sampling_freq = 10000
 
 dac = pwm_dac_driver.PWM_DAC(12, 3.3)

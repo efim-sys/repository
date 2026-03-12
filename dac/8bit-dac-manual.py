@@ -1,5 +1,4 @@
 import RPi.GPIO as GPIO
-import time
 
 GPIO.setmode(GPIO.BCM)
 
@@ -14,12 +13,14 @@ def setbyte(byte):
         mask = 1 << i
         GPIO.output(r2r[i], byte & mask)
 
-vmax = 3.3
+vmax = 3.005
 
 def voltage2num(v):
     if(not (0 <= v <= vmax)):
         print(f"Voltage out of range [0.0v - {vmax}v]")
-        return 0
+        if v > vmax: v = vmax
+        else: v = 0
+        
     return int(v/vmax * 255)
 
 try:

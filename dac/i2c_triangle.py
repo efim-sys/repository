@@ -4,7 +4,7 @@ import time
 
 amplitude = 1.5
 freq = 100
-sampling_freq = 10000
+sampling_freq = 100000
 
 dac = mcp4725_driver.MCP4725(4.2)
 

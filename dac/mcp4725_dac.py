@@ -1,7 +1,12 @@
 import mcp4725_driver
 
+import os
+
+os.system("raspi-gpio set 2 a0")
+os.system("raspi-gpio set 3 a0")
+
 if __name__ == "__main__":
-    dac = mcp4725_driver.MCP4725(3.3, verbose=True)
+    dac = mcp4725_driver.MCP4725(4.242, verbose=True)
 
     try:
         
